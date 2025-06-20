@@ -229,13 +229,13 @@ header::before {
   width: 90%;
   height: 150%;
   top: 10%;
-  left: 5%;
+  left: 50%;
+  transform: translateX(-50%) translateZ(-5px) translateY(0%);
   background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   transform-origin: center bottom;
-  transform: translateZ(-5px) translateY(0%);
   z-index: 1;
   opacity: 0;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -306,7 +306,7 @@ header::before {
 }
 
 .letter-content .signature {
-  text-align: right;
+  text-align: center;
   margin-top: 30px;
   font-style: italic;
   color: #ff6b9d;
@@ -328,12 +328,12 @@ footer {
 /* Animaciones de la carta */
 .letter.centered {
   position: fixed;
-  top: 50%;
+  top: 200%;
   left: 50%;
-  width: 90vw;
+  width: 100vw;
   max-width: 500px;
   min-height: 400px;
-  max-height: 90vh;
+  height: 80dvh;
   transform: translate(-50%, -50%) scale(1.08);
   z-index: 999;
   opacity: 1 !important;
@@ -363,9 +363,9 @@ footer {
   100% {
     position: absolute;
     top: 10%;
-    left: 5%;
+    left: 50%;
     width: 90%;
-    transform: translateZ(5px) translateY(-90%);
+    transform: translateX(-50%) translateZ(5px) translateY(-90%);
     opacity: 0;
     z-index: 1;
   }
@@ -399,7 +399,7 @@ footer {
   .birthday-header p { font-size: 1.1rem; }
   .birthday-icons { font-size: 1.5rem; gap: 15px; }
   .envelope-container { width: 250px; height: 170px; }
-  .letter { width: 85%; }
+  .letter { width: 85%; left: 50%; transform: translateX(-50%) translateZ(-5px) translateY(0%); }
   .scroll-indicator { padding: 12px 20px; }
   .scroll-text { font-size: 0.8rem; }
 }

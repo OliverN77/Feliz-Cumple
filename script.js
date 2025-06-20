@@ -82,7 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const letterTranslateY = -letterProgress * 90;
       const letterZ = letterProgress < 0.1 ? -5 : 5;
       letter.style.opacity = letterProgress.toString();
-      letter.style.transform = `translateZ(${letterZ}px) translateY(${letterTranslateY}%)`;
+      // Mantener la carta centrada usando translateX(-50%)
+      letter.style.transform = `translateX(-50%) translateZ(${letterZ}px) translateY(${letterTranslateY}%)`;
 
       // Animación del contenido de la carta
       if (progress > 0.5) {
@@ -129,9 +130,9 @@ document.addEventListener("DOMContentLoaded", () => {
         wasCentered = false;
       }
     } else {
-      // Estado inicial
+      // Estado inicial - mantener centrada
       letter.style.opacity = "0";
-      letter.style.transform = "translateZ(-5px) translateY(0%)";
+      letter.style.transform = "translateX(-50%) translateZ(-5px) translateY(0%)";
       letterContent.style.transform = "translateY(30%)";
       letterContent.style.opacity = "0";
       letter.classList.remove("centered");
